@@ -27,7 +27,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 ```
 
-By default conda will always activate its `base` virtual env anytime you open you shell.
+By default conda will always activate its `base` virtualenv anytime you lauch a shell.  
 If you don't want that just add this line to your `.bash_profile` before the block added by conda:
 
 ```bash
@@ -36,7 +36,7 @@ export CONDA_AUTO_ACTIVATE_BASE=false
 
 ## Create a virtualenv
 
-It's not wise to install all your packages into the `base` environment. Also as a general rule, any new project should have its own virtualenv or at least reuse one for general purpose.
+It's not wise to install all your packages into the `base` environment. Also, as a general rule, any new project should have its own virtualenv or at least, reuse one for general purpose.
 So let's create a new one by cloning from the base env (usually the best solution):
 
 ```bash
@@ -68,9 +68,9 @@ jupyter notebook
 
 
 ## Jupytext
-I've always worked with standard python, so I was a bit confused by the browser jupyter notebooks environment. They offer cool visualization and interact features but they don't offer the best DX.
-The feature I miss most is the lack of refactoring tools (like renaming a variable) or highlighting all the occurrences of a certain variable.
-Then I found the [jupytext](https://github.com/mwouts/jupytext) that came to the rescue.
+I've always worked with standard python, so I was a bit confused by the development environment inside the browser. Jupyter Notebooks offer cool visualization and interactinve features but they don't offer the best DX.
+The feature I miss most is refactoring tool (like renaming a variable) or the highlighting of all the occurrences of a certain variable.  
+But after some exploration [jupytext](https://github.com/mwouts/jupytext) came to the rescue.
 
 Jupytext is a plugin for Jupyter that can save Jupyter notebooks as plain python script and vice-versa. That means that you can create and work on your notebook normally from the browser and if you want to refactor something you can open the generated script, modify this one on your code editor and when saved it generates an updated version of your original notebook. More info on the [project documentation](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html).
 
@@ -104,16 +104,16 @@ This optional modules is quite useful anytime you modify any imported external m
 4. Keep on working on you notebook
 
 ## Configuration
-I've made some assumption on where the dataset and generated code should live, but this entirely configurable. All the options can be changed by editing the `config.toml` file.
+I've made some assumption on where the dataset and generated code should live, but this is entirely configurable. All the options can be changed by editing the `config.toml` file.
 
 ## Common functions (lib)
-Inside the `lib` directory there are some reusable common functions that I need to reuse from project to project. This dir is a WIP and they will probably expand over time. This is just my personal configuration, fell free to ignore this directory if you don't need it.
-The modules inside 'lib' are scoped my pseudonime of the python lib the functions refer to, for for example the reusable `pandas` function are into `lib/pd` or the matplotlib functions are into `lib/plt`.
+Inside the `lib` directory there are some reusable common functions that I need to reuse from project to project. This modules are a WIP and they will probably expand over time. This is just my personal configuration, fell free to ignore this directory if you don't need it.
+The modules inside `lib` are scoped my pseudonime of the python lib the functions refer to, for for example the reusable `pandas` function are into `lib/pd` or the matplotlib functions are into `lib/plt`.
 
 ## Import generated scrips into your notebooks
-Another cool feature of Jupytex is that once it generates a script from a notebook you can then import that script into another notebook 🤯
+Another cool feature of Jupytex is that once it generates a script from a notebook, you can then import that script into another notebook 🤯
 
-And thanks to the modularization introduced above you just need to do this:
+And thanks to the `loader` introduced above you just need to do this:
 
 ```python
 import loader
@@ -122,7 +122,7 @@ from src import load_data
 
 ### Suppress output when importing scripts
 
-If you notebook generate output then that output will be visible when you import the corresponding generated script. Most of the times you don't need this, so here's a couple of strategy about that.
+If your notebook generates output then that output will be visible when you import the corresponding generated script. Most of the times you don't need this, so here's a couple of strategy about that.
 
 `suppress_stdout` is a helper context manager I've defined, it suppress the output from `print` and pandas output
 
@@ -131,7 +131,7 @@ with suppress_stdout():
     from src.load_data import get_export as exp_load
 ```
 
-Although it seems ineffective for generated matplotlib pictures.
+Unfortunately it seems ineffective for generated matplotlib pictures.
 So when `suppress_stdout` won't work you can use this instead:
 
 ```python
