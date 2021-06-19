@@ -1,4 +1,4 @@
-# Notebook Starter
+# Modular Jupyter Notebooks Starter
 
 A simple starter showing how to modularize Jupyter notebooks, import external py modules and use you code editor to refactor anything.
 
