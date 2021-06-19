@@ -1,6 +1,6 @@
 # Notebook Starter
 
-A simple starter project for jupyter notebooks showing some tip and tricks so save keystrokes and maximize code modularization.
+A simple starter showing how to modularize Jupyter notebooks, import external py modules and use you code editor to refactor anything.
 
 
 ## Install Conda
