@@ -1,6 +1,10 @@
 # Modular Jupyter Notebooks Starter
 
-A simple starter showing how to modularize Jupyter notebooks, import external py modules and use you code editor to refactor anything.
+A simple starter showing how to: 
+- import external py modules into your notebooks 
+- generate python scripts from notebooks automatically (and vice-versa)
+- use your code editor to edit/refactor your notebooks
+- import your notebooks into other notebooks as python modules    
 
 
 ## Install Conda
