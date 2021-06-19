@@ -1,0 +1,4 @@
+launch_strategy: in_place
+layout:
+  -
+    - conda activate ml; jupyter notebook

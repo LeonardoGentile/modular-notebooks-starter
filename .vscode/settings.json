@@ -1,0 +1,8 @@
+{
+  "jupyter.jupyterServerType": "local",
+  "cSpell.enabled": true,
+  "python.analysis.extraPaths": [
+    "./src"
+  ],
+  "python.pythonPath": "/usr/local/anaconda3/envs/ml/bin/python"
+}

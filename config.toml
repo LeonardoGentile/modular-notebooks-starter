@@ -1,0 +1,5 @@
+[paths]
+data_dir = "datasets"
+data_file_name = 'Top250.csv' # inside data_dir
+# data_file_abs_path = '' # If defined it takes precedence. It can be located anywhere on your system
+image_dir = "images"
