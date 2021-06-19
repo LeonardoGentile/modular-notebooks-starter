@@ -72,11 +72,13 @@ jupyter notebook
 
 
 ## Jupytext
-I've always worked with standard python, so I was a bit confused by the development environment inside the browser. Jupyter Notebooks offer cool visualization and interactinve features but they don't offer the best DX.
-The feature I miss most is refactoring tool (like renaming a variable) or the highlighting of all the occurrences of a certain variable.  
-But after some exploration [jupytext](https://github.com/mwouts/jupytext) came to the rescue.
+I've always worked with standard python, so I was a bit confused by the development environment inside the browser. Jupyter Notebooks offer cool visualization and interactive features but they don't offer the best DX.  
+The feature I miss most is the *refactoring* option (like renaming a variable) or the highlighting of all occurrences of a certain variable.  
+Fotunately, after some research, [jupytext](https://github.com/mwouts/jupytext) came to the rescue.
 
-Jupytext is a plugin for Jupyter that can save Jupyter notebooks as plain python script and vice-versa. That means that you can create and work on your notebook normally from the browser and if you want to refactor something you can open the generated script, modify this one on your code editor and when saved it generates an updated version of your original notebook. More info on the [project documentation](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html).
+Jupytext is a plugin for Jupyter that can save Jupyter notebooks as plain python script and vice-versa.  
+That means that you can create and work on your notebook normally from the browser and if you want to refactor something, you can open the generated script, modify it on your code editor and when saved it generates an updated version of your original notebook.   
+More info on the [Jupytext documentation](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html).
 
 After activating your env, install jupytext with:
 
